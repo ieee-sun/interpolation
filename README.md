@@ -1,9 +1,7 @@
 # Interpolation for Missing Data - OVERVIEW
 
-#### An overview to various Interpolation methods for missing data. Demo in Time-series records with NaN entries.
-
----
-
+#### An overview to various Interpolation methods for missing data. Demo in Time-series records with `NaN` entries.
+![random_nan_imputated](https://github.com/ieee-sun/interpolation/assets/172009644/7766fc70-931b-45b4-b2c0-9a4b346ce0f9)
 **Table of Contents**
 * [Bacic] - Linear Interpolation
 * [Advanced] - Curved Interpolation:
@@ -18,6 +16,8 @@
 * Demo & Comparison
   >  [Interpolation for Missing Data - Detailed Demo](https://github.com/ieee-sun/interpolation/blob/e3cc3d6d1db75e55bef3dafce4992c9e6f95e164/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
 (Download to View)
+
+![interpolated_charts_demo](https://github.com/ieee-sun/interpolation/assets/172009644/c40d4ed3-ee58-4c8d-ae5f-1a9bc245625c)
 
 
 ## [Bacic] - Linear Interpolation
@@ -44,13 +44,9 @@ KNN imputation is a versatile method that **estimates missing values based on th
 > [Interpolation for Missing Data - Demo](https://github.com/ieee-sun/interpolation/blob/e3cc3d6d1db75e55bef3dafce4992c9e6f95e164/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
 
 
-image -
+> Prepared & Published by Sun CHUNG, *SMIEEE* M.Sc. HKU - *colab w/ MIT-IDSS*
 
 ---
-
-Prepared & Published by Sun CHUNG, *SMIEEE* M.Sc. HKU - *colab w/ MIT-IDSS*
-
------
 
 README.md
 End of File
