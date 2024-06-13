@@ -14,7 +14,7 @@
   * Using K-Nearest Neighbors to Impute Missing Values
 *Notes for Data Engineers
 * Demo & Comparison
-  >  [Interpolation for Missing Data - Detailed Demo](https://github.com/ieee-sun/interpolation/blob/e3cc3d6d1db75e55bef3dafce4992c9e6f95e164/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
+  >  [Interpolation for Missing Data - Detailed Demo](https://github.com/ieee-sun/interpolation/blob/4c2bb574bbb4805d9ae468ae8bb9f81b804b10ac/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
 (Download to View)
 
 ![interpolated_charts_demo](https://github.com/ieee-sun/interpolation/assets/172009644/c40d4ed3-ee58-4c8d-ae5f-1a9bc245625c)
@@ -41,7 +41,7 @@ KNN imputation is a versatile method that **estimates missing values based on th
 ## Notes for Data Engineers
 ## Demo & Comparison
 - #### Download to View:
-> [Interpolation for Missing Data - Demo](https://github.com/ieee-sun/interpolation/blob/e3cc3d6d1db75e55bef3dafce4992c9e6f95e164/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
+> [Interpolation for Missing Data - Demo](https://github.com/ieee-sun/interpolation/blob/4c2bb574bbb4805d9ae468ae8bb9f81b804b10ac/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
 
 
 > Prepared & Published by Sun CHUNG, *SMIEEE* M.Sc. HKU - *colab w/ MIT-IDSS*
