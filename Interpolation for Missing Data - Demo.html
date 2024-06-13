@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>convert</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Data Interpolation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14578,10 +14578,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_top" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Interpolation-for-Missing-Data">Interpolation for Missing Data<a class="anchor-link" href="#Interpolation-for-Missing-Data">&#182;</a></h1><p>An overview to various Interpolation methods for missing data.
 Demo in Time-series records with <code>NaN</code> entries.</p>
-
+<hr>
+<p>Published by Sun CHUNG, <i>SMIEEE</i> M.Sc. HKU - <i>colab w/ MIT-IDSS</i><p>
 </div>
 </div>
 </div>
@@ -14592,33 +14593,38 @@ Demo in Time-series records with <code>NaN</code> entries.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="CONTENT">CONTENT<a class="anchor-link" href="#CONTENT">&#182;</a></h3><p>[Bacic] -
-<strong>Linear Interpolation</strong></p>
+<strong><a href="#div_linear">Linear Interpolation</a></strong></p>
 <p>[Advanced] -
-<strong>Interpolation Methods</strong>:</p>
+<strong><a href="#div_adv">Curved Interpolation</a></strong>:</p>
 <ul>
-<li>Polynomial Interpolation</li>
-<li>Spline Interpolation</li>
+<li><a href="#div_poly">Polynomial Interpolation</a></li>
+<li><a href="#div_spline">Spline Interpolation</li>
 </ul>
-<p><strong>Dealing with Seasonal Data</strong>:</p>
+<p><strong><a href="#div_seasonal">Dealing with Seasonal Data</a></strong>:</p>
 <ul>
 <li>Seasonal Decomposition of Time Series</li>
 <li>Filling Missing Values Using Seasonal Decomposition</li>
 </ul>
 <p><strong>Machine Learning for Imputation</strong>:</p>
 <ul>
-<li>Using K-Nearest Neighbors to Impute Missing Values</li>
+<li><a href="#div_knn">Using K-Nearest Neighbors to Impute Missing Values</a></li>
 </ul>
-<p><strong>Notes for Data Engineers</strong></p>
+<p><strong><a href="#div_IEEEnote">Notes for Data Engineers</a></strong></p>
+<p></p>
+<p><strong><a href="#div_demo">Demo & Comparison</a></strong></p>
+<hr>
+</div>
+</div>
+</div>
+</div>
 
-</div>
-</div>
-</div>
-</div>
+
+
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_linear" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Linear-Interpolation">Linear Interpolation<a class="anchor-link" href="#Linear-Interpolation">&#182;</a></h1>
 </div>
 </div>
@@ -14643,7 +14649,7 @@ Demo in Time-series records with <code>NaN</code> entries.</p>
 <h3 id="Essential-Libraries-for-Linear-Interpolation:">Essential Libraries for Linear Interpolation:<a class="anchor-link" href="#Essential-Libraries-for-Linear-Interpolation:">&#182;</a></h3>
 <pre><code>import pandas as pd
 import numpy as np
-mport matplotlib.pyplot as plt</code></pre>
+import matplotlib.pyplot as plt</code></pre>
 
 </div>
 </div>
@@ -15197,6 +15203,7 @@ Visualize the original data to assess if the data shape is suitable for linear i
 <li>Limitations: May not capture complex patterns or non-linear trends in the data.</li>
 <li>Example Use Case: Daily sales data where sales generally follow a linear trend over short periods, or time-gaps.</li>
 </ul>
+<p><a href="#div_top">Back to Top</a></p>
 
 </div>
 </div>
@@ -15217,7 +15224,7 @@ Visualize the original data to assess if the data shape is suitable for linear i
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_adv" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="%5BAdvanced%5D---Missing-Data-in-Time">[Advanced] - Missing Data in Time<a class="anchor-link" href="#%5BAdvanced%5D---Missing-Data-in-Time">&#182;</a></h1>
 </div>
 </div>
@@ -15341,7 +15348,7 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_poly" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Polynomial-Interpolation">Polynomial Interpolation<a class="anchor-link" href="#Polynomial-Interpolation">&#182;</a></h1>
 </div>
 </div>
@@ -15407,7 +15414,7 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_spline" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Spline-Interpolation">Spline Interpolation<a class="anchor-link" href="#Spline-Interpolation">&#182;</a></h1>
 </div>
 </div>
@@ -15502,6 +15509,7 @@ class="
 <li>Limitations: Requires more computational effort than linear interpolation.
 Example Use Case: Seasonal sales data with smooth but complex fluctuations.</li>
 </ul>
+<p><a href="#div_top">Back to Top</a></p>
 
 </div>
 </div>
@@ -15511,7 +15519,7 @@ Example Use Case: Seasonal sales data with smooth but complex fluctuations.</li>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_seasonal" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Dealing-with-Seasonal-Data:">Dealing with Seasonal Data:<a class="anchor-link" href="#Dealing-with-Seasonal-Data:">&#182;</a></h1>
 </div>
 </div>
@@ -15768,6 +15776,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
+<p><a href="#div_top">Back to Top</a></p>
 
 </div>
 </div>
@@ -15777,7 +15786,7 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_knn" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Machine-Learning-(for-Imputation)">Machine Learning (for Imputation)<a class="anchor-link" href="#Machine-Learning-(for-Imputation)">&#182;</a></h1>
 </div>
 </div>
@@ -16005,6 +16014,7 @@ class="
 <li>Limitations: Computationally intensive; performance depends on the choice of neighbors and distance metric.</li>
 <li>Example Use Case: Retail sales data with missing values that follow patterns similar to those of neighboring days.</li>
 </ul>
+<p><a href="#div_top">Back to Top</a></p>
 
 </div>
 </div>
@@ -16014,7 +16024,7 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_IEEEnote" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Notes-for-Data-Engineers--">Notes for Data Engineers -<a class="anchor-link" href="#Notes-for-Data-Engineers--">&#182;</a></h1><ol>
 <li><p>Data Characteristics: Understand the characteristics of data (e.g., trends, seasonality, smoothness) to choose the most appropriate interpolation method.</p>
 </li>
@@ -16030,7 +16040,7 @@ Computational Resources: Consider the computational cost of the interpolation me
 <li><p>KNN imputation: A powerful technique for handling missing data by leveraging the information from similar data points with neighboring properties.</p>
 </li>
 </ol>
-
+<p><a href="#div_top">Back to Top</a></p>
 </div>
 </div>
 </div>
@@ -16039,7 +16049,7 @@ Computational Resources: Consider the computational cost of the interpolation me
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div id="div_demo" class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="APPENDIX---Demo-&amp;-Comparison">APPENDIX - Demo &amp; Comparison<a class="anchor-link" href="#APPENDIX---Demo-&amp;-Comparison">&#182;</a></h1>
 </div>
 </div>
@@ -16306,7 +16316,7 @@ class="
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
+<p><a href="#div_top">Back to Top</a></p>
 </div>
 </body>
 
