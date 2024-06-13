@@ -3,7 +3,7 @@
 #### An overview to various Interpolation methods for missing data. Demo in Time-series records with `NaN` entries.
 ![random_nan_imputated](https://github.com/ieee-sun/interpolation/assets/172009644/7766fc70-931b-45b4-b2c0-9a4b346ce0f9)
 **Table of Contents**
-* [Bacic] - Linear Interpolation
+* [Basic] - Linear Interpolation
 * [Advanced] - Curved Interpolation:
   * Polynomial Interpolation
   * Spline Interpolation
