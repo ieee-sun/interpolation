@@ -1,11 +1,23 @@
-# Interpolation for Missing Data
+# Interpolation for Missing Data - OVERVIEW
 
 #### An overview to various Interpolation methods for missing data. Demo in Time-series records with NaN entries.
 
+---
 
 **Table of Contents**
-
-[TOC]
+* [Bacic] - Linear Interpolation
+* [Advanced] - Curved Interpolation:
+  * Polynomial Interpolation
+  * Spline Interpolation
+* Dealing with Seasonal Data:
+  * Seasonal Decomposition of Time Series
+  * Filling Missing Values Using Seasonal Decomposition
+* Machine Learning for Imputation:
+  * Using K-Nearest Neighbors to Impute Missing Values
+*Notes for Data Engineers
+* Demo & Comparison
+  >  [Interpolation for Missing Data - Detailed Demo](https://github.com/ieee-sun/interpolation/blob/e3cc3d6d1db75e55bef3dafce4992c9e6f95e164/Interpolation%20for%20Missing%20Data%20-%20Overview%20-%20Demo.html)
+(Download to View)
 
 
 ## [Bacic] - Linear Interpolation
